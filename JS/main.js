@@ -8,7 +8,11 @@ var seconds = date.getSeconds();
 var hr = (hr < 10) ? '0' + hour : hour; 
 var min = (minutes < 10) ? '0' + minutes : minutes;
 var sec = (seconds < 10) ? '0' + seconds : seconds;
-var totalTime = hr + ':' + min + ':' + sec;
+var totalTime = '#' + hr + ''+ min + '' + sec;
 
-$('#clock').text(totalTime);
+var changeColor = $('.clock');
+changeColor.css('background', totalTime);
+$('.time').text(totalTime);
 },1000);
+
+
